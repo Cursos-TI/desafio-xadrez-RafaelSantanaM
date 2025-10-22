@@ -10,10 +10,11 @@ int main() {
     const int mov_torre = 5;
     const int mov_bispo = 5;
     const int mov_rainha = 8;
+    const int mov_cav_x = 2, mov_cav_y = 1; 
     int escolha_peca, dir_peca;
     int casa = 0;
     // Entrada manual para a peça a ser movida: 
-    printf("Digite a peça a ser movida(1 para Torre, 2 para Bispo, 3 para Rainha): ");
+    printf("Digite a peça a ser movida(1 para Torre, 2 para Bispo, 3 para Rainha, 4 para Cavalo): ");
     scanf("%d", &escolha_peca);
 
     // Implementação de Movimentação do Bispo
@@ -51,6 +52,19 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    // Primeiro loop(for):
+      if(escolha_peca == 4){
+          for(int i = 0; i < mov_cav_y; i++){
+            do{
+                printf("Casa: %d\n", casa);
+                printf("Direcao: Baixo\n");
+                casa++;
+            }while(casa < mov_cav_x);
+            printf("Casa: %d\n", casa);
+            printf("Direcao: Esquerda\n");
+            
+        };
+    };
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
